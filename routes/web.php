@@ -25,3 +25,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // LogoutController
 use App\Http\Controllers\LogoutController;
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
+
+// ProfileController
+use App\Http\Controllers\ProfileController;
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
