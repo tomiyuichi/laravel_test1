@@ -15,14 +15,14 @@ return new class extends Migration
             $table->id();
             // $table->string('column1'); // CSVの列に合わせて定義
             // $table->string('column2');
-            $table->string('displacement');
-            $table->string('mpg');
-            $table->string('cylinders');
-            $table->string('horsepower');
-            $table->string('weight');
-            $table->string('acceleration');
-            $table->string('model_year');
-            $table->string('origin');
+            $table->float('displacement');
+            $table->integer('mpg');
+            $table->integer('cylinders');
+            $table->integer('horsepower');
+            $table->integer('weight');
+            $table->float('acceleration');
+            $table->integer('model_year');
+            $table->integer('origin');
             $table->string('car_name');
             $table->timestamps();
         });
