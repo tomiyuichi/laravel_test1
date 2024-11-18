@@ -28,4 +28,13 @@ Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 // ProfileController
 use App\Http\Controllers\ProfileController;
-Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
+
+// CsvController
+use App\Http\Controllers\CsvController;
+Route::get('/upload', [CsvController::class, 'showUploadForm'])->name('upload.form');
+Route::post('/upload', [CsvController::class, 'uploadCsv'])->name('upload.csv');
+
+
+
+
