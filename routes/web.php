@@ -35,6 +35,9 @@ use App\Http\Controllers\CsvController;
 Route::get('/upload', [CsvController::class, 'showUploadForm'])->name('upload.form');
 Route::post('/upload', [CsvController::class, 'uploadCsv'])->name('upload.csv');
 
+// Auto_mpg_Controller
+use App\Http\Controllers\Auto_mpg_Controller;
+Route::get('/auto_mpg', [Auto_mpg_Controller::class, 'index'])->name('auto_mpg.index');
 
 
 
