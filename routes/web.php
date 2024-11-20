@@ -22,22 +22,19 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //     return redirect('/login'); // ログアウト後のリダイレクト先を指定
 // });
 
-// LogoutController
 use App\Http\Controllers\LogoutController;
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
-// ProfileController
 use App\Http\Controllers\ProfileController;
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
 
-// CsvController
 use App\Http\Controllers\CsvController;
 Route::get('/upload', [CsvController::class, 'showUploadForm'])->name('upload.form');
 Route::post('/upload', [CsvController::class, 'uploadCsv'])->name('upload.csv');
 
-// Auto_mpg_Controller
 use App\Http\Controllers\Auto_mpg_Controller;
 Route::get('/auto_mpg', [Auto_mpg_Controller::class, 'index'])->name('auto_mpg.index');
 
-
-
+use App\Http\Controllers\MarkdownController;
+Route::get('/markdown/{fileName}', [MarkdownController::class, 'show'])->name('markdown.show');
+Route::get('/markdown', [MarkdownController::class, 'index'])->name('markdown.index');
