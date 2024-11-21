@@ -36,5 +36,9 @@ use App\Http\Controllers\Auto_mpg_Controller;
 Route::get('/auto_mpg', [Auto_mpg_Controller::class, 'index'])->name('auto_mpg.index');
 
 use App\Http\Controllers\MarkdownController;
-Route::get('/markdown/{fileName}', [MarkdownController::class, 'show'])->name('markdown.show');
 Route::get('/markdown', [MarkdownController::class, 'index'])->name('markdown.index');
+// Route::get('/markdown/{fileName}', [MarkdownController::class, 'show'])->name('markdown.show');
+Route::get('/markdown/{path}', [MarkdownController::class, 'show'])
+     ->where('path', '.*')    // 任意のディレクトリ階層を受け入れる
+     ->name('markdown.show'); // サブディレクトリを含むMarkdownファイル
+

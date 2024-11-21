@@ -18,3 +18,20 @@ public function boot()
     Paginator::useBootstrap();
 }
 ```
+
+- [mermaidサンプル](https://notepm.jp/help/mermaid)
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+```plantuml
+@startuml
+Alice -> Bob: Hello Bob
+Bob --> Alice: Hi Alice
+@enduml
+```

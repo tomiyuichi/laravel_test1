@@ -10,10 +10,10 @@
     <div class="card">
         <div class="card-body">
             <ul>
-                @foreach ($fileList as $fileName)
+                @foreach ($fileList as $file)
                     <li>
-                        <a href="{{ route('markdown.show', ['fileName' => $fileName]) }}">
-                            {{ ucfirst(str_replace('-', ' ', $fileName)) }}
+                        <a href="{{ route('markdown.show', ['path' => $file['path']]) }}">
+                            {{ $file['path'] }}
                         </a>
                     </li>
                 @endforeach

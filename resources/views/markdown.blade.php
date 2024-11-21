@@ -16,6 +16,28 @@
             });
         });
     </script>
+
+    {{-- PlantUMLサーバーでレンダリングする例 --}}
+    <script src="https://unpkg.com/plantuml-encoder"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const plantumlElements = document.querySelectorAll('.plantuml');
+            plantumlElements.forEach(el => {
+                const encodedDiagram = plantumlEncoder.encode(el.textContent);
+                const img = document.createElement('img');
+                img.src = `https://www.plantuml.com/plantuml/svg/${encodedDiagram}`;
+                el.replaceWith(img);
+            });
+        });
+    </script>
+
+    {{-- mermaid記法のスクリプト --}}
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            mermaid.initialize({ startOnLoad: true });
+        });
+    </script>
 @stop
 
 @section('title', 'Markdown Page')
