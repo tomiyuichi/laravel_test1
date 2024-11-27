@@ -34,6 +34,9 @@ Route::post('/upload', [CsvController::class, 'uploadCsv'])->name('upload.csv');
 
 use App\Http\Controllers\Auto_mpg_Controller;
 Route::get('/auto_mpg', [Auto_mpg_Controller::class, 'index'])->name('auto_mpg.index');
+use App\Http\Controllers\Dynamic_mpg_Controller;
+Route::get('/dynamic_mpg', [Dynamic_mpg_Controller::class, 'index'])->name('dynamic_mpg.index');
+
 
 use App\Http\Controllers\MarkdownController;
 Route::get('/markdown', [MarkdownController::class, 'index'])->name('markdown.index');
