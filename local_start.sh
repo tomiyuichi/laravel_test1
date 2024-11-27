@@ -9,5 +9,5 @@ php artisan optimize
 php artisan vendor:publish --tag=public --force
 
 # Laravelアプリを起動
-# php -S 0.0.0.0:8080 -t public
-php artisan serve
+# php -S 0.0.0.0:8000 -t public
+php artisan serve --env=.env
