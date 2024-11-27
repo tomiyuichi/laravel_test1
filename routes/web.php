@@ -37,6 +37,10 @@ Route::get('/auto_mpg', [Auto_mpg_Controller::class, 'index'])->name('auto_mpg.i
 use App\Http\Controllers\Dynamic_mpg_Controller;
 Route::get('/dynamic_mpg', [Dynamic_mpg_Controller::class, 'index'])->name('dynamic_mpg.index');
 
+use App\Livewire\LiveMpgTable;
+Route::get('/live_mpg', LiveMpgTable::class);
+use App\Livewire\LivewireSamplePage;
+Route::get('/livewire_sample', LivewireSamplePage::class);
 
 use App\Http\Controllers\MarkdownController;
 Route::get('/markdown', [MarkdownController::class, 'index'])->name('markdown.index');

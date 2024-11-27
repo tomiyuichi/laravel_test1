@@ -360,8 +360,12 @@ return [
                     'url' => 'markdown',
                 ],
                 [
-                    'text' => 'level_one',
-                    'url' => '#',
+                    'text' => 'dynamic_mpg',
+                    'url' => 'dynamic_mpg',
+                ],
+                [
+                    'text' => 'live_mpg',
+                    'url' => 'live_mpg',
                 ],
                 [
                     'text' => 'level_one',
@@ -587,5 +591,5 @@ return [
     |
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];
