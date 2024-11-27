@@ -10,6 +10,7 @@ use Livewire\WithPagination;
 class LiveMpgTable extends Component
 {
     use WithPagination;
+    protected $paginationTheme = 'bootstrap'; // これを追加
 
     public $message = "こんにちは！Livewireのテストページです。";
     public $search = ''; // 検索条件を保持するプロパティ
