@@ -6,8 +6,8 @@ This is a sample Markdown file.
 - Item 22
 - Item 33
 
-- [sample_1](sample_1) 
-- [sample_2](sample_2)
+- [sample_1](../sample_1.md) 
+- [sample_2](../sample_2.md)
 - [google](https://google.com)
 
 ```php

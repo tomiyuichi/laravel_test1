@@ -26,6 +26,11 @@ class LiveColumnMPG extends Component
         $this->allColumns = DB::getSchemaBuilder()->getColumnListing('auto_mpg_table'); // 'auto_mpg_table'はテーブル名
         // $this->allColumns = Schema::getColumnListing('auto_mpg_table');
         $this->columns = $this->allColumns; // 初期表示では全カラムを表示
+
+        $this ->minMpg = Auto_mpg::min('mpg'); //null;         // 数値範囲検索の最小値
+        $this ->maxMpg = Auto_mpg::max('mpg'); //null;         // 数値範囲検索の最大値
+        $this ->minHorsepower = Auto_mpg::min('horsepower'); //null;  // 数値範囲検索の最小値
+        $this ->maxHorsepower = Auto_mpg::max('horsepower'); //null;  // 数値範囲検索の最大値
     }
 
     public function toggleColumn($column)

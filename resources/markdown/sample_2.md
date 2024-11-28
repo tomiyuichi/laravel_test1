@@ -6,8 +6,8 @@ This is a sample Markdown file.
 - Item 8
 - Item 9
 
-- [sample_0](sample) 
-- [sample_1](sample_1)
+- [sample_0](sample.md) 
+- [sample_1](sample_1.md)
 
 ```sql
 CREATE TEMPORARY TABLE temp_table AS

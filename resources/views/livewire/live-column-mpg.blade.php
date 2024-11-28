@@ -1,3 +1,38 @@
+@section('css')
+    {{-- nouislider.min.jsのテーマCSS --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css">
+@stop
+
+@section('js')
+    {{-- nouislider.min.jsのスクリプト --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
+    <script>
+        document.addEventListener('livewire:load', function () {
+            const slider = document.getElementById('slider');
+
+            // スライダーが初期化されていない場合のみ実行
+            if (slider && !slider.noUiSlider) {
+                noUiSlider.create(slider, {
+                    start: [{{ $minHorsepower }}, {{ $maxHorsepower }}],
+                    connect: true,
+                    range: {
+                        'min': 0,
+                        'max': 100
+                    }
+                });
+
+                slider.noUiSlider.on('update', function (values) {
+                    const [min, max] = values.map(value => Math.round(value));
+                    @this.set('minHorsepower', min);
+                    @this.set('maxHorsepower', max);
+                    document.getElementById('slider-min').innerText = min;
+                    document.getElementById('slider-max').innerText = max;
+                });
+            }
+        });
+    </script>
+@stop
+
 <div>
     <!-- 検索ボックス -->
     <div class="mb-4">
@@ -28,6 +63,18 @@
                 <input type="number" id="maxHorsepower" class="form-control" wire:model.live="maxHorsepower">
             </div>
         </div>
+
+        <!-- スライダーのHTML -->
+<!--         <div class="mb-4">
+            <label>Numeric Range</label>
+            <div id="slider" wire:ignore></div>
+            <div class="d-flex justify-content-between mt-2">
+                <span>Min: <span id="slider-min">{{ $minHorsepower }}</span></span>
+                <span>Max: <span id="slider-max">{{ $maxHorsepower }}</span></span>
+            </div>
+        </div> -->
+
+
     </div>
 
     <!-- カラムの切り替えボタン -->
@@ -74,3 +121,5 @@
         {{ $cars->links() }}
     @endif
 </div>
+
+

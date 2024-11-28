@@ -6,6 +6,6 @@ This is a sample Markdown file.
 - Item 5
 - Item 6
 
-- [sample_0](sample) 
-- [sample_2](sample_2)
+- [sample_0](sample.md) 
+- [sample_2](sample_2.md)
 
