@@ -7,6 +7,7 @@ php artisan view:clear
 # php artisan storage:link #  ERROR  The [public/storage] link already exists.
 php artisan optimize
 php artisan vendor:publish --tag=public --force
+php artisan livewire:publish
 
 # Laravelアプリを起動
-php -S 0.0.0.0:8080 -t public
+# php -S 0.0.0.0:8080 -t public
