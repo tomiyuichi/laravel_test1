@@ -372,6 +372,10 @@ return [
                     'url' => 'live_count',
                 ],
                 [
+                    'text' => 'live_column_mpg',
+                    'url' => 'live_column_mpg',
+                ],
+                [
                     'text' => 'level_one',
                     'url' => '#',
                     'submenu' => [

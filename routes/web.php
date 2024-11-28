@@ -43,6 +43,8 @@ use App\Livewire\LivewireSamplePage;
 Route::get('/livewire_sample', LivewireSamplePage::class);
 use App\Livewire\LiveCount;
 Route::get('/live_count', LiveCount::class);
+use App\Livewire\LiveColumnMpg;
+Route::get('/live_column_mpg', LiveColumnMpg::class);
 
 
 use App\Http\Controllers\MarkdownController;

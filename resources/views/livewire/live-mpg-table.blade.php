@@ -29,6 +29,8 @@
         </tbody>
     </table>
 
-    <!-- ページネーション -->
-    {{ $cars->links() }}
+    <!-- ページネーションリンク -->
+    <div class="mt-4">
+        {{ $cars->links() }}
+    </div>
 </div>
