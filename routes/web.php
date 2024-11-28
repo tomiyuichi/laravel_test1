@@ -41,6 +41,9 @@ use App\Livewire\LiveMpgTable;
 Route::get('/live_mpg', LiveMpgTable::class);
 use App\Livewire\LivewireSamplePage;
 Route::get('/livewire_sample', LivewireSamplePage::class);
+use App\Livewire\LiveCount;
+Route::get('/live_count', LiveCount::class);
+
 
 use App\Http\Controllers\MarkdownController;
 Route::get('/markdown', [MarkdownController::class, 'index'])->name('markdown.index');

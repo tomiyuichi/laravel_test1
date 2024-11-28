@@ -368,6 +368,10 @@ return [
                     'url' => 'live_mpg',
                 ],
                 [
+                    'text' => 'live_count',
+                    'url' => 'live_count',
+                ],
+                [
                     'text' => 'level_one',
                     'url' => '#',
                     'submenu' => [

@@ -4,7 +4,7 @@
         クリックしてみてください
     </button>
     <br> -->
-    <input type="text" wire:model="search" placeholder="検索..." class="form-control mb-3">
+    <input type="text" wire:model.live="search" placeholder="検索..." class="form-control mb-3">
     <button wire:click="$set('message', 'something')">filter</button>
     <br>
 
