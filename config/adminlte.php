@@ -344,90 +344,61 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text' => 'multilevel',
+            'text' => 'menu_dynamic',
             'icon' => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'auto_mpg_csv_upload',
-                    'url' => 'upload',
-                ],
-                [
-                    'text' => 'auto_mpg_filter',
-                    'url' => 'auto_mpg',
-                ],
-                [
-                    'text' => 'markdown_index',
-                    'url' => 'markdown',
-                ],
-                [
-                    'text' => 'dynamic_mpg',
-                    'url' => 'dynamic_mpg',
-                ],
-                [
-                    'text' => 'live_mpg',
-                    'url' => 'live_mpg',
-                ],
-                [
-                    'text' => 'live_count',
-                    'url' => 'live_count',
-                ],
-                [
-                    'text' => 'live_column_mpg',
-                    'url' => 'live_column_mpg',
-                ],
-                [
-                    'text' => 'level_one',
+                    'text' => 'MPG data',
                     'url' => '#',
                     'submenu' => [
                         [
-                            'text' => 'level_two',
-                            'url' => '#',
-                        ],
-                        [
-                            'text' => 'level_two',
+                            'text' => 'Controller',
                             'url' => '#',
                             'submenu' => [
                                 [
-                                    'text' => 'level_three',
-                                    'url' => '#',
+                                    'text' => 'auto_mpg_csv_upload',
+                                    'url' => 'upload',
                                 ],
                                 [
-                                    'text' => 'level_three',
-                                    'url' => '#',
+                                    'text' => 'auto_mpg_filter',
+                                    'url' => 'auto_mpg',
+                                ],
+                                [
+                                    'text' => 'dynamic_mpg',
+                                    'url' => 'dynamic_mpg',
+                                ],
+                            ],
+                        ],
+                        [
+                            'text' => 'Livewire',
+                            'url' => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'live_mpg',
+                                    'url' => 'live_mpg',
+                                ],
+                                [
+                                    'text' => 'live_count',
+                                    'url' => 'live_count',
+                                ],
+                                [
+                                    'text' => 'live_column_mpg',
+                                    'url' => 'live_column_mpg',
                                 ],
                             ],
                         ],
                     ],
                 ],
                 [
-                    'text' => 'level_one',
-                    'url' => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                        ],
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
+                    'text' => 'todo_list',
+                    'url' => 'todo_list',
                 ],
             ],
+        ],
+        [
+            'text' => 'menu_static',
+            'icon' => 'fas fa-fw fa-share',
+            'url' => 'markdown',
         ],
         ['header' => 'labels'],
         [

@@ -54,3 +54,8 @@ Route::get('/markdown/{path}', [MarkdownController::class, 'show'])
      ->where('path', '.*')    // 任意のディレクトリ階層を受け入れる
      ->name('markdown.show'); // サブディレクトリを含むMarkdownファイル
 
+use App\Livewire\TodoList;
+Route::get('/todo_list', TodoList::class);
+
+
+

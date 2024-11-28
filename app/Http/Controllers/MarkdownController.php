@@ -39,7 +39,6 @@ class MarkdownController extends Controller
                 'name' => ucfirst(str_replace(['-', '/'], ' ', pathinfo($relativePath, PATHINFO_FILENAME))),
             ];
         });
-        dump($fileList);
 
         return view('markdown_index', compact('fileList'));
     }
@@ -67,7 +66,6 @@ class MarkdownController extends Controller
     public function show($path)
     {
         // リクエストされたMarkdownファイルのパスを解決
-        dump($path);
         $filePath = resource_path("markdown/{$path}");
         if (!File::exists($filePath)) {
             abort(404, "Markdown file not found.");
