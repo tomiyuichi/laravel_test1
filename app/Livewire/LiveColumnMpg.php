@@ -13,6 +13,8 @@ class LiveColumnMPG extends Component
 
     public $columns = []; // 表示するカラム
     public $allColumns = []; // データベースから取得した全てのカラム候補
+    public $sortField = 'id'; // デフォルトのソートカラム
+    public $sortDirection = 'asc'; // デフォルトのソート方向
 
     public $search = '';           // 検索キーワード
     public $minMpg = null;         // 数値範囲検索の最小値
@@ -40,6 +42,16 @@ class LiveColumnMPG extends Component
             $this->columns = array_diff($this->columns, [$column]);
         } else {
             $this->columns[] = $column;
+        }
+    }
+
+    public function sortBy($field)
+    {
+        if ($this->sortField === $field) {
+            $this->sortDirection = $this->sortDirection === 'asc' ? 'desc' : 'asc';
+        } else {
+            $this->sortField = $field;
+            $this->sortDirection = 'asc';
         }
     }
 
@@ -87,7 +99,9 @@ class LiveColumnMPG extends Component
 
         // $cars = Auto_mpg::select($this->columns)->get();
         // $cars = Auto_mpg::select($this->columns)->paginate(10);
-        $cars = $query->paginate(10);//->appends($request->query());
+        $cars = $query
+            -> orderBy($this->sortField, $this->sortDirection)
+            -> paginate(10);
         return view('livewire.live-column-mpg', compact('cars'));
     }
 }

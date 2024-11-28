@@ -103,7 +103,21 @@
             <thead>
                 <tr>
                     @foreach ($columns as $column)
-                        <th>{{ ucfirst($column) }}</th>
+                        <!-- <th>{{ ucfirst($column) }}</th> -->
+                        <th>
+                            <button wire:click="sortBy('{{ $column }}')">
+                                {{ ucfirst($column) }}
+                                @if ($sortField === $column)
+                                    @if ($sortDirection === 'asc')
+                                        ▲
+                                    @else
+                                        ▼
+                                    @endif
+                                @else
+                                    -
+                                @endif
+                            </button>
+                        </th>
                     @endforeach
                 </tr>
             </thead>

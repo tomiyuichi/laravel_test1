@@ -9,10 +9,12 @@
         "erusev/parsedown": "^1.7",
         "erusev/parsedown-extra": "^0.8.1",
         "jeroennoten/laravel-adminlte": "^3.14",
+        "kyslik/column-sortable": "^6.6",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.5",
-        "livewire/livewire": "^3.5"
+        "livewire/livewire": "^3.5",
+        "rappasoft/laravel-livewire-tables": "^3.5"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
