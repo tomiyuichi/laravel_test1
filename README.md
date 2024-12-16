@@ -50,3 +50,19 @@ Route::get('/livewire_sample', LivewireSamplePage::class);
 - 現時点で、`live_mpg`のページネーションのデザインがおかしくなっている。（`auto_mpg`）は大丈夫。
 - 理由は不明ながら、関係ないはずのinputボタン（ただし、wire:clickにバインドした変数あり）を押すと、更新された
 
+
+
+### 20241216 追記
+
+- `railway up` のデプロイで、クラッシュするようになったので、一旦サービス削除
+- github経由で改めてデプロイ、その際は`.env`ファイルの中身をコピー、ドメインを生成（結果的に前と一緒）、ポートを8080に設定した。
+- それでもまだ`railway run php artisan migrate`がうまくいかない
+- また、`railway run php artisan cache:clear`もうまくいかない
+- 結果的に、`laraveltest1`の環境変数のうち、以下をパブリックのアドレスとポートに設定すると、うまくできた。
+	- DB_HOST
+	- DB_PORT
+- migrateのあとは、`mysql.railway.internal`と`3306`に戻した。webuiからのデータベース操作は、内部アドレスでうまくいく見たい。
+
+
+
+
