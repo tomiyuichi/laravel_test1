@@ -55,7 +55,7 @@ Route::get('/markdown/{path}', [MarkdownController::class, 'show'])
      ->name('markdown.show'); // サブディレクトリを含むMarkdownファイル
 
 use App\Livewire\TodoList;
-Route::get('/todo_list', TodoList::class);
+Route::get('/todo_list', TodoList::class)->middleware('auth');
 
 
 
